@@ -17,10 +17,8 @@ jobs:
           ruby-version: '3.0'
 
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+        run: gem install bundler && bundle install
 
-      - name: Run RSpec
-        run: bundle exec rspec
+      - name: Run RSpec with Github Formatter
+        run: rspec --format documentation --format RSpec::Github::Formatter
 
