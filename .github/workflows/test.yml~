@@ -2,6 +2,8 @@ name: RSpec Tests
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   test:
